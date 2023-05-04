@@ -5,7 +5,11 @@ const router=express.Router();
 
 router.get("/all",getAllUsers);
 router.post("/new",register);
-router.get("/userid/:id",getUserDetails);
-router.get("/userid/special",specialFunc)
+router.post("/login",login);
+//router.get("/userid/:id",getUserDetails);
+
+router.route("/userid/:id",getUserDetails);
+
+//router.get("/userid/special",specialFunc)
 
 export default router;
